@@ -4,13 +4,13 @@
          "test-data.rkt"
          rackunit)
 
-(define (smoke-test-make-noble)
+(define (smoke-test)
   (clear-asserts!)
-  (define noble-1 (make-noble names houses))
-  (define noble-2 (make-noble names houses))
+  (define noble-1 (make-noble names genders houses))
+  (define noble-2 (make-noble names genders houses))
   (list (evaluate noble-1 (solve asserts))
         (evaluate noble-2 (solve asserts))))
 
-(check-equal? (print-noble (make-noble '("Ian") '("Red Rose")))
+(check-equal? (print-noble (make-noble '("Ian") '("Male") '("Red Rose")))
               "Ian of the Red Rose"
               "Simple Printing")
