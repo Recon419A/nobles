@@ -1,0 +1,3 @@
+loves
+hates
+is friends with
