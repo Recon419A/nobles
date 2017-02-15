@@ -11,6 +11,12 @@
   (list (evaluate noble-1 (solve asserts))
         (evaluate noble-2 (solve asserts))))
 
-(check-equal? (print-noble (make-noble '("Ian") '("Male") '("Red Rose")))
-              "Ian of the Red Rose"
-              "Simple Printing")
+(define (smoke-2)
+  (clear-asserts!)
+  (define ian-noble (make-noble names genders houses))
+  (assert (equal? (noble-name ian-noble) "Ian"))
+  (evaluate ian-noble (solve asserts)))
+
+;; (check-equal? (print-noble (make-noble '("Ian") '("Male") '("Red Rose")))
+;;               "Ian of the Red Rose"
+;;               "Simple Printing")

@@ -2,7 +2,7 @@
 
 (require rosette/lib/angelic)
 
-(provide noble make-noble print-noble)
+(provide noble make-noble print-noble noble-name)
 
 (struct noble (name gender house) #:transparent)
 
@@ -10,9 +10,9 @@
 ;;   (random-instance noble (list names genders houses)))
 
 (define (make-noble names genders houses)
-  (noble (car (choose* (shuffle names)))
-         (car (choose* (shuffle genders)))
-         (car (choose* (shuffle houses)))))
+  (noble (apply choose* (shuffle names))
+         (apply choose* (shuffle genders))
+         (apply choose* (shuffle houses))))
 
 
 (define (print-noble noble)

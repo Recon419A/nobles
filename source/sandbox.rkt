@@ -9,6 +9,7 @@
 (define (test-synth)
   (define x (choose* (shuffle choices)))
   (evaluate x (asserts)))
+
   ;; (define binding
   ;;   (synthesize #:forall (list x)
   ;;               #:guarantee (= x 4)))
