@@ -6,10 +6,9 @@
 
 (define (smoke-unconstrained)
   (clear-asserts!)
-  (define noble-1 (make-noble names genders houses hobbies locations))
-  (define noble-2 (make-noble names genders houses hobbies locations))
-  (list (evaluate noble-1 (solve asserts))
-        (evaluate noble-2 (solve asserts))))
+  (for/list ([i 5])
+    (clear-asserts!)
+    (evaluate (make-noble names genders houses hobbies locations) (solve asserts))))
 
 (define (smoke-constrain)
   (clear-asserts!)
