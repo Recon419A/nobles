@@ -2,7 +2,7 @@
 
 (require rosette/lib/angelic)
 
-(provide random-instance)
+(provide choose-random random-instance)
 
 (define (random-instance struct-name fields-options)
   (let ([field-values (for/list ([field-options fields-options])
@@ -12,4 +12,6 @@
     (apply struct-name field-values)))
 
 (define (choose-random choices)
-  (apply choose* (shuffle choices)))
+  (let ([choice (apply choose* (shuffle (cons (gensym) (cons (gensym) choices))))])
+    (assert (member choice choices))
+    choice))
