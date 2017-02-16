@@ -1,6 +1,6 @@
 #lang rosette
 
-(require "../source/nondeterminism.rkt")
+(require "../source/choice.rkt")
 
 (define (smoke-1)
   (clear-asserts!)

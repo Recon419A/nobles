@@ -1,6 +1,6 @@
 #lang rosette
 
-(require rosette/lib/angelic)
+(require "choice.rkt")
 
 (provide noble make-noble print-noble noble-name)
 
@@ -10,10 +10,9 @@
 ;;   (random-instance noble (list names genders houses)))
 
 (define (make-noble names genders houses)
-  (noble (apply choose* (shuffle names))
-         (apply choose* (shuffle genders))
-         (apply choose* (shuffle houses))))
-
+  (noble (choose-random names)
+         (choose-random genders)
+         (choose-random houses)))
 
 (define (print-noble noble)
   (string-append (noble-name noble) " of the " (noble-house noble)))
