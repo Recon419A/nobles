@@ -8,18 +8,29 @@
   (clear-asserts!)
   (for/list ([i 5])
     (clear-asserts!)
-    (evaluate (make-noble names genders houses hobbies locations) (solve asserts))))
+    (evaluate (make-noble names species genders houses hobbies locations) (solve asserts))))
 
 (define (smoke-constrain)
   (clear-asserts!)
-  (define ian-noble (make-noble names genders houses hobbies locations))
+  (define ian-noble (make-noble names species genders houses hobbies locations))
   (assert (equal? (person-name ian-noble) "Ian"))
   (evaluate ian-noble (solve asserts)))
 
 (define (smoke-prefilled)
   (clear-asserts!)
-  (define premade-noble (make-noble '("Ian") '("male") '("Red Rose") '("Swimming") '("Swamptown")))
+  (define premade-noble (make-noble '("Ian") '("human") '("male") '("Red Rose") '("Swimming") '("Swamptown")))
   (evaluate premade-noble (solve asserts)))
 
 (define (smoke-print)
   (print-noble (smoke-prefilled)))
+
+(define (smoke-names)
+  (clear-asserts!)
+  (define ))
+
+(define (smoke-name-genders)
+  (clear-asserts!)
+  (for/list ([i 5])
+    (clear-asserts!)
+    (define random-noble (make-noble names species genders houses hobbies locations))
+    (evaluate (make-noble names species genders houses hobbies locations) (solve asserts))))

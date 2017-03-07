@@ -4,15 +4,16 @@
 
 (provide noble make-noble print-noble person-name)
 
-(struct person (name gender age) #:transparent)
+(struct person (name species gender age) #:transparent)
 
 (struct noble person (house hobby location) #:transparent)
 
 ;; (define (make-noble names genders houses)
 ;;   (random-instance noble (list names genders houses)))
 
-(define (make-noble names genders houses hobbies locations)
+(define (make-noble names species genders houses hobbies locations)
   (noble (choose-random names)
+         (choose-random species)
          (choose-random genders)
          (choose-random (range 8 108))
          (choose-random houses)
