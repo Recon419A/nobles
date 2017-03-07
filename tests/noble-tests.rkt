@@ -24,13 +24,10 @@
 (define (smoke-print)
   (print-noble (smoke-prefilled)))
 
-(define (smoke-names)
-  (clear-asserts!)
-  (define ))
-
 (define (smoke-name-genders)
   (clear-asserts!)
   (for/list ([i 5])
     (clear-asserts!)
     (define random-noble (make-noble names species genders houses hobbies locations))
+    (assert (member (person-name random-noble) (assoc)))
     (evaluate (make-noble names species genders houses hobbies locations) (solve asserts))))
