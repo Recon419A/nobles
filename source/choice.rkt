@@ -13,5 +13,5 @@
 
 (define (choose-random choices)
   (let ([choice (apply choose* (shuffle (cons (gensym) (cons (gensym) choices))))])
-    (assert (member choice choices))
+    (assert (member choice (shuffle choices)))
     choice))
