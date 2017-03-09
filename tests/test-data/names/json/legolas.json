@@ -1,0 +1,9 @@
+{
+    "name": "Legolas",
+    "constraints": {
+        "prevents": {}
+        "requires": {
+            "house": ["The Woodland Realm"]
+        }
+    }
+}

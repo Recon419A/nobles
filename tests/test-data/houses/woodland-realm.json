@@ -1,0 +1,14 @@
+{
+    "house": "The Woodland Realm",
+    "constraints": {
+        "prevents": {
+            "name": [
+                "Sauron"
+                "Saruman"
+            ]
+        }
+        "requires": {
+            "species": ["Elf"]
+        }
+    }
+}
