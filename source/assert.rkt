@@ -1,6 +1,6 @@
 #lang rosette
 
-(provide equal! not-equal! in!)
+(provide equal! not-equal! in! not-in!)
 
 (define-syntax (p stx)
   (datum->syntax stx (reverse (cdr (syntax->datum stx)))))
@@ -22,3 +22,9 @@
          [symbol (cadr stx-list)]
          [possible-values (caddr stx-list)])
     (datum->syntax stx `(assert (member ,symbol (shuffle ,possible-values ))))))
+
+(define-syntax (not-in! stx)
+  (let* ([stx-list (syntax->datum stx)]
+         [symbol (cadr stx-list)]
+         [possible-values (caddr stx-list)])
+    (datum->syntax stx `(assert (not (member ,symbol (shuffle ,possible-values )))))))

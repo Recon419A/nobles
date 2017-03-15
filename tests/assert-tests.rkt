@@ -14,3 +14,7 @@
 ;; in! tests
 (check-exn exn:fail? (lambda () (in! 1 '(2 3 4))))
 (check-not-exn (lambda () (in! 1 '(1 2 3))))
+
+;; not-in! tests
+(check-exn exn:fail? (lambda () (not-in! 1 '(1 2 3))))
+(check-not-exn (lambda () (not-in! 1 '(2 3 4))))
