@@ -1,6 +1,7 @@
 #lang rosette
 
 (require "../source/noble.rkt"
+         "../source/assert.rkt"
          "test-data.rkt"
          rackunit)
 
@@ -12,8 +13,8 @@
 
 (define (smoke-constrain)
   (clear-asserts!)
-  (define ian-noble (make-noble names species genders houses hobbies locations))
-  (assert (equal? (person-name ian-noble) "Ian"))
+  (define william-noble (make-noble names species genders houses hobbies locations))
+  (equal! (person-name william-noble) "William")
   (evaluate ian-noble (solve asserts)))
 
 (define (smoke-prefilled)
