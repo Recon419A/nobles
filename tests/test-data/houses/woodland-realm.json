@@ -3,10 +3,10 @@
     "constraints": {
         "prevents": {
             "name": [
-                "Sauron"
+                "Sauron",
                 "Saruman"
             ]
-        }
+        },
         "requires": {
             "species": ["Elf"]
         }

@@ -1,0 +1,11 @@
+{
+    "location": "The Hellvault",
+    "constraints": {
+        "prevents": {
+            "hobby": ["swimming", "fishing"]
+        }
+        "requires": {
+            "species": ["angel", "demon", "archangel", "archdemon"]
+        }
+    }
+}

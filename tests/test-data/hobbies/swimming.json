@@ -1,0 +1,9 @@
+{
+    "hobby": "swimming",
+    "constraints": {
+        "prevents": {
+            "species": ["dwarf"]
+        },
+        "requires": {}
+    }
+}
