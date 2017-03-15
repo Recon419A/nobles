@@ -1,5 +1,7 @@
 #lang rosette
 
+(require (for-syntax racket/match))
+
 (provide equal! not-equal! in! not-in!)
 
 (define-syntax (p stx)
