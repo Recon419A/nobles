@@ -5,9 +5,9 @@
 (struct species-names (species male female androgynous))
 
 (define human-names (species-names "human"
-                                   (file->lines "test-data/names/human/male.txt")
-                                   (file->lines "test-data/names/human/female.txt")
-                                   (file->lines "test-data/names/human/androgynous.txt")))
+                                   (file->lines "test-data/names.bak/male.txt")
+                                   (file->lines "test-data/names.bak/female.txt")
+                                   (file->lines "test-data/names.bak/androgynous.txt")))
 
 (define names (append (species-names-male human-names)
                       (species-names-female human-names)
