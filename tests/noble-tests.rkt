@@ -15,7 +15,7 @@
   (clear-asserts!)
   (define william-noble (make-noble names species genders houses hobbies locations))
   (equal! (person-name william-noble) "William")
-  (evaluate ian-noble (solve asserts)))
+  (evaluate william-noble (solve asserts)))
 
 (define (smoke-prefilled)
   (clear-asserts!)
